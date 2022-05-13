@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  color: #abb2bf;
+  font-family: Raleway,sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #21252b;
+  margin: 0;
+}
+
+.panel {
+  padding: 15px;
+}
+
+.row {
+  flex: 0 0 100%;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+#buildings {
+  border-bottom: 1px solid black;
+}
+
+#ingridients, #selected {
+  background-color: #282c34;
+}
+
+#ingridients {
+  border-left: 1px solid black;
+}
+
+h1 {
+  width: 100%;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#menu, #sub-menu {
+  display: flex;
+  list-style: none;
+  flex: 0 0 100%;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+#menu li {
+  font-size: 18px;
+}
+
+#menu li#search-bar {
+  position: absolute;
+  right: 0;
+  width: 200px
+}
+
+#menu li, #sub-menu li {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+#menu li:hover, #sub-menu li:hover {
+  background-color: #282c34;
+}
+
+#menu li.active, #sub-menu li.active {
+  background-color: #42464e;
+}
+
+#menu li:not(:last-child), #sub-menu li:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+#search-bar input {
+  background-color: #42464e;
+  margin: 0;
+  border: 0;
+  padding: 4px;
+  color: white;
+}
