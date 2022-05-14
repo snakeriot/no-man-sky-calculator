@@ -21,7 +21,7 @@
   cursor: pointer;
 }
 
-#menu li:hover, #sub-menu li:hover {
+#menu li:hover:not(#search-bar), #sub-menu li:hover {
   background-color: #282c34;
 }
 
@@ -39,4 +39,5 @@
   border: 0;
   padding: 4px;
   color: white;
+  outline: none;
 }

@@ -4,6 +4,7 @@
 	<title>No Man's Sky | Base Build Calculator</title>
 	<link rel="icon" type="image/x-icon" href="./images/favicon.png"/>
 	<meta name="description" content="Base Build Calculator for No Man's Sky. Is designed to simplify new bases creation on the and caluclation of required resources."/>
+
 	<link rel="stylesheet" href="./css/styles.css"/>
 	<link rel="stylesheet" href="./css/navBar.css"/>
 
@@ -12,18 +13,11 @@
 <body>
 	<div id="buildings" class="row">
 		<ul id="menu">
-			<li>Freighter Components</li>
-			<li>Basic Components</li>
-			<li>Structures</li>
-			<li>Equipment</li>
 			<li id="search-bar">
 				<input name="search" placeholder="Search"/>
 			</li>
 		</ul>
-		<ul id="sub-menu">
-			<li>Doors & Ladders</li>
-			<li>Frames & Foundations</li>
-			<li>Windows</li>
+		<ul id="sub-menu" class="hidden">
 		</ul>
 		<div id="build-list"></div>
 	</div>
@@ -34,4 +28,7 @@
 		<h1>Ingridients</h1>
 	</div>
 </body>
+
+<script type="text/javascript" src="./js/menu.js"></script>
+<script type="text/javascript" src="./js/search.js"></script>
 </html>
