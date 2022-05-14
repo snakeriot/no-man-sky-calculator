@@ -6,7 +6,7 @@ const Building = {
     TIMBER_WALL: {
       name: "Timber Wall",
       icon: "tibmer_basic_wall.webp",
-      cathegory: menu.list.BASIC_COMPONENTS.TIMBER,
+      cathegory: Menu.list.BASIC_COMPONENTS.TIMBER,
       recipe: [{
         ingridient: Ingridient.list.CARBON,
         count: 25
@@ -15,7 +15,7 @@ const Building = {
     TIMBER_WALL_LARGE_WINDLOW: {
       name: "Extruded Timber Large Window",
       icon: "timber_extruded_window_wall.webp",
-      cathegory: menu.list.BASIC_COMPONENTS.TIMBER,
+      cathegory: Menu.list.BASIC_COMPONENTS.TIMBER,
       recipe: [{
         ingridient: Ingridient.list.CARBON,
         count: 25
@@ -27,7 +27,7 @@ const Building = {
     TRADE_TERMINAL: {
       name: "Galactic Trade Terminal",
       icon: "trade_terminal.webp",
-      cathegory: menu.list.EQUIPMENT.PERMANENT,
+      cathegory: Menu.list.EQUIPMENT.PERMANENT,
       recipe: [{
         ingridient: Ingridient.list.FERRIT_M,
         count: 25
