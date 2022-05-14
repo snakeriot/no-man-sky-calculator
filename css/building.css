@@ -1,0 +1,24 @@
+.building {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  background: #191d22;
+  border: 1px solid black;
+  width: 265px;
+  cursor: pointer;
+}
+
+.building img {
+  width: 200px;
+}
+
+.building h3 {
+  margin: 0;
+  padding: 5px;
+  border-top: 1px solid black;
+  cursor: pointer;
+  height: 65px;
+  width: 265px;
+  vertical-align: middle;
+  display: table-cell;
+}

@@ -24,6 +24,9 @@ const Menu = {
   },
   /**
    * Select menu item.
+   *
+   * @param $node - javascript object of the clicked node.
+   * @param item - Menu item that was clicked.
    */
   pickItem: ($node, item) => {
     const $parent = $node.parentElement;
@@ -38,6 +41,10 @@ const Menu = {
       }
     }
     $node.classList.add("active");
+    Building.renderList({
+      property: "cathegory",
+      value: item
+    });
 
     if ($parent.id === "sub-menu") {
       return;
