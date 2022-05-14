@@ -1,14 +1,14 @@
-const menu = {
+const Menu = {
   /**
    * Render menu when page is opened.
    */
   render: () => {
     const $menu = document.getElementById("menu");
-    const menuItems = menu.items;
+    const menuItems = Menu.list;
 
     for (let itemString in menuItems) {
       const item = menuItems[itemString];
-      menu.createMenuNode(item, $menu);
+      Menu.createMenuNode(item, $menu);
     }
   },
   /**
@@ -18,7 +18,7 @@ const menu = {
     const $item = document.createElement("li");
     $item.innerHTML = item.name;
     $item.onclick = (event) => {
-      menu.pickItem(event.target, item);
+      Menu.pickItem(event.target, item);
     };
     $parent.prepend($item);
   },
@@ -48,7 +48,7 @@ const menu = {
     if (item.children) {
       $menu.classList.remove("hidden");
       for (const name in item.children) {
-        menu.createMenuNode({name: item.children[name]}, $menu);
+        Menu.createMenuNode({name: item.children[name]}, $menu);
       }
     } else {
       $menu.classList.add("hidden");
@@ -57,7 +57,7 @@ const menu = {
   /**
    * List of menu items.
    **/
-  items: {
+  list: {
     FREIGHT_COMPONENTS: {
       name: "Freighter Components"
     },
@@ -109,4 +109,4 @@ const menu = {
   }
 }
 
-menu.render();
+Menu.render();
