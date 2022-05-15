@@ -15,13 +15,5 @@ const IngridientsPanel = {
    */
   removeBuilding: (building) => {
 
-  },
-  /**
-   * Get url of the icon for the ingridient.
-   *
-   * @param ingridient - javascript object of the ingridient.
-   */
-  getIconUrl: (ingridient) => {
-    return "./images/ingridients/" + ingridient.icon;
   }
 }

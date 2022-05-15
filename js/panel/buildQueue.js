@@ -1,4 +1,4 @@
-const BuildQueue = {
+const BuildQueuePanel = {
   queue: [],
   /**
    * Add building to the queue.
@@ -6,14 +6,14 @@ const BuildQueue = {
    * @param building - javascript object of the building.
    */
   add: (building) => {
-    if (BuildQueue.isPresent(building)) {
-      BuildQueue.changeNumber(building, Operations.ADD);
+    if (BuildQueuePanel.isPresent(building)) {
+      BuildQueuePanel.changeNumber(building, Operations.ADD);
     } else {
-      BuildQueue.queue.push({
+      BuildQueuePanel.queue.push({
         building: building,
         number: 1
       });
-      BuildQueue.render(building);
+      BuildQueuePanel.render(building);
     }
   },
   /**
@@ -22,7 +22,7 @@ const BuildQueue = {
    * @param building - javascript object of the building.
    */
   isPresent: (building) => {
-    return BuildQueue.getBuilding(building) !== undefined;
+    return BuildQueuePanel.getBuilding(building) !== undefined;
   },
   /**
    * Render building on the UI panel.
@@ -32,9 +32,9 @@ const BuildQueue = {
   render: (building) => {
     const $building = document.createElement("div");
     $building.classList.add("building");
-    $building.classList.add(BuildingsPanel.getUid(building));
+    $building.classList.add(Buildings.getUid(building));
     const $buildIcon = document.createElement("img");
-    $buildIcon.src = BuildingsPanel.getIconUrl(building);
+    $buildIcon.src = Buildings.getIconUrl(building);
     $building.append($buildIcon);
     const $buildName = document.createElement("span");
     $buildName.innerHTML = building.name;
@@ -46,7 +46,7 @@ const BuildQueue = {
     const $buildNumSubstract = document.createElement("a");
     $buildNumSubstract.innerHTML = "-";
     $buildNumSubstract.onclick = () => {
-      BuildQueue.changeNumber(building, Operations.SUBSTRACT);
+      BuildQueuePanel.changeNumber(building, Operations.SUBSTRACT);
     };
     $buildNumControl.append($buildNumSubstract);
     const $buildNum = document.createElement("span");
@@ -56,7 +56,7 @@ const BuildQueue = {
     const $buildNumAdd = document.createElement("a");
     $buildNumAdd.innerHTML = "+";
     $buildNumAdd.onclick = () => {
-      BuildQueue.changeNumber(building, Operations.ADD);
+      BuildQueuePanel.changeNumber(building, Operations.ADD);
     };
     $buildNumControl.append($buildNumAdd);
     $building.append($buildNumControl);
@@ -71,9 +71,9 @@ const BuildQueue = {
    * @param operation one of the BuildQueue.operation
    */
   changeNumber: (building, operation) => {
-    const buildingInQ = BuildQueue.getBuilding(building);
+    const buildingInQ = BuildQueuePanel.getBuilding(building);
     const $queue = document.getElementById("queue");
-    const $building = $queue.querySelector("." + BuildingsPanel.getUid(building));
+    const $building = $queue.querySelector("." + Buildings.getUid(building));
 
     if (operation === Operations.SUBSTRACT) {
       buildingInQ.number -= 1;
@@ -82,7 +82,7 @@ const BuildQueue = {
     }
     if (buildingInQ.number < 1) {
       $building.remove();
-      BuildQueue.queue = BuildQueue.queue.filter((b) => {
+      BuildQueuePanel.queue = BuildQueuePanel.queue.filter((b) => {
         return b.building.name !== building.name;
       });
       return;
@@ -97,7 +97,7 @@ const BuildQueue = {
    * @return object with two fields - building and number.
    */
   getBuilding: (building) => {
-    const queue = BuildQueue.queue;
+    const queue = BuildQueuePanel.queue;
 
     for (let buildingInex in queue) {
       const buildingInQ = queue[buildingInex];

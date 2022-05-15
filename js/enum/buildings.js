@@ -1,35 +1,39 @@
-const BuildingsPanel = {
-  /**
-   * Render list of the buildings based on the search criteria.
-   */
-  renderList: (criteria) => {
-    const buildings = BuildingsPanel.find(criteria);
-    const $buildings = document.getElementById("building-list");
-    $buildings.innerHTML = "";
-
-    for (let buildingInex in buildings) {
-      BuildingsPanel.render($buildings, buildings[buildingInex]);
-    }
+/**
+ * List of buildings.
+ */
+const Buildings = {
+  TIMBER_WALL: {
+    name: "Timber Wall",
+    icon: "tibmer_basic_wall.webp",
+    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    recipe: [{
+      ingridient: Ingridients.CARBON,
+      count: 25
+    }]
   },
-  /**
-   * Render single building.
-   *
-   * @param $buildings document.element object of the wrapper to which building will be attached.
-   * @param biolding javascript object of the building to render.
-   */
-  render: ($buildings, building) => {
-      const $building = document.createElement("div");
-      $building.classList.add("building");
-      const $icon = document.createElement("img");
-      $icon.src = BuildingsPanel.getIconUrl(building);
-      $building.append($icon);
-      const $title = document.createElement("h3");
-      $title.innerHTML = building.name;
-      $building.append($title);
-      $building.onclick = () => {
-        BuildQueue.add(building);
-      }
-      $buildings.append($building);
+  TIMBER_WALL_LARGE_WINDLOW: {
+    name: "Extruded Timber Large Window",
+    icon: "timber_extruded_window_wall.webp",
+    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    recipe: [{
+      ingridient: Ingridients.CARBON,
+      count: 25
+    }, {
+      ingridient: Ingridients.GLASS,
+      count: 1
+    }]
+  },
+  TRADE_TERMINAL: {
+    name: "Galactic Trade Terminal",
+    icon: "trade_terminal.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_M,
+      count: 25
+    }, {
+      ingridient: Ingridients.MICROCHIP,
+      count: 3
+    }]
   },
   /**
    * Get list of buildings by search criteria.
@@ -42,7 +46,7 @@ const BuildingsPanel = {
     const value = criteria.value;
 
     if (property === "cathegory") {
-      return BuildingsPanel.findByMenuItem(value);
+      return Buildings.findByMenuItem(value);
     }
     return [];
   },
@@ -63,9 +67,10 @@ const BuildingsPanel = {
       cathegories.push(item.name);
     }
     const buildings = [];
+    const array = EnumUtil.toArray(Buildings);
 
-    for (let buildingInex in Buildings) {
-      const building = Buildings[buildingInex];
+    for (let inex in array) {
+      const building = array[inex];
 
       if (cathegories.indexOf(building.cathegory) > -1) {
         buildings.push(building);

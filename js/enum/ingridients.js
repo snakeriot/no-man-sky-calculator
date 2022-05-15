@@ -1,3 +1,6 @@
+/**
+ * List of buildings.
+ */
 const Ingridients = {
   CARBON: {
     name: "Carbon",
@@ -14,5 +17,13 @@ const Ingridients = {
   FERRIT_M: {
     name: "Magnetised Ferrite",
     icon: "magnetised_ferrite.webp"
+  },
+  /**
+   * Get url of the icon for the ingridient.
+   *
+   * @param ingridient - javascript object of the ingridient.
+   */
+  getIconUrl: (ingridient) => {
+    return "./images/ingridients/" + ingridient.icon;
   }
 }
