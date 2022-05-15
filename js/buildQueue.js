@@ -7,7 +7,7 @@ const BuildQueue = {
    */
   add: (building) => {
     if (BuildQueue.isPresent(building)) {
-      BuildQueue.changeNumber(building, BuildQueue.operation.ADD);
+      BuildQueue.changeNumber(building, Operations.ADD);
     } else {
       BuildQueue.queue.push({
         building: building,
@@ -32,9 +32,9 @@ const BuildQueue = {
   render: (building) => {
     const $building = document.createElement("div");
     $building.classList.add("building");
-    $building.classList.add(Building.getUid(building));
+    $building.classList.add(BuildingsPanel.getUid(building));
     const $buildIcon = document.createElement("img");
-    $buildIcon.src = Building.getIconUrl(building);
+    $buildIcon.src = BuildingsPanel.getIconUrl(building);
     $building.append($buildIcon);
     const $buildName = document.createElement("span");
     $buildName.innerHTML = building.name;
@@ -46,7 +46,7 @@ const BuildQueue = {
     const $buildNumSubstract = document.createElement("a");
     $buildNumSubstract.innerHTML = "-";
     $buildNumSubstract.onclick = () => {
-      BuildQueue.changeNumber(building, BuildQueue.operation.SUBSTRACT);
+      BuildQueue.changeNumber(building, Operations.SUBSTRACT);
     };
     $buildNumControl.append($buildNumSubstract);
     const $buildNum = document.createElement("span");
@@ -56,7 +56,7 @@ const BuildQueue = {
     const $buildNumAdd = document.createElement("a");
     $buildNumAdd.innerHTML = "+";
     $buildNumAdd.onclick = () => {
-      BuildQueue.changeNumber(building, BuildQueue.operation.ADD);
+      BuildQueue.changeNumber(building, Operations.ADD);
     };
     $buildNumControl.append($buildNumAdd);
     $building.append($buildNumControl);
@@ -73,9 +73,9 @@ const BuildQueue = {
   changeNumber: (building, operation) => {
     const buildingInQ = BuildQueue.getBuilding(building);
     const $queue = document.getElementById("queue");
-    const $building = $queue.querySelector("." + Building.getUid(building));
+    const $building = $queue.querySelector("." + BuildingsPanel.getUid(building));
 
-    if (operation === BuildQueue.operation.SUBSTRACT) {
+    if (operation === Operations.SUBSTRACT) {
       buildingInQ.number -= 1;
     } else {
       buildingInQ.number += 1;
@@ -107,9 +107,5 @@ const BuildQueue = {
       }
     }
     return;
-  },
-  operation: {
-    SUBSTRACT: "substract",
-    ADD: "add"
   }
 }

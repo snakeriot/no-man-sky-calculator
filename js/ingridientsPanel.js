@@ -1,4 +1,4 @@
-const Ingridient = {
+const IngridientsPanel = {
   toBuild: [],
   /**
    * Add building to to build list.
@@ -23,26 +23,5 @@ const Ingridient = {
    */
   getIconUrl: (ingridient) => {
     return "./images/ingridients/" + ingridient.icon;
-  }
-  /**
-   * List of ingridients available for crafting.
-   */
-  list: {
-    CARBON: {
-      name: "Carbon",
-      icon: "carbon.webp"
-    },
-    MICROCHIP: {
-      name: "Microprocessor",
-      icon: "microprocessor.webp"
-    },
-    GLASS: {
-      name: "Glass",
-      icon: "glass.webp"
-    },
-    FERRIT_M: {
-      name: "Magnetised Ferrite",
-      icon: "magnetised_ferrite.webp"
-    }
   }
 }

@@ -4,7 +4,7 @@ const Menu = {
    */
   render: () => {
     const $menu = document.getElementById("menu");
-    const menuItems = Menu.list;
+    const menuItems = MenuItems;
 
     for (let itemString in menuItems) {
       const item = menuItems[itemString];
@@ -41,7 +41,7 @@ const Menu = {
       }
     }
     $node.classList.add("active");
-    Building.renderList({
+    BuildingsPanel.renderList({
       property: "cathegory",
       value: item
     });
@@ -59,59 +59,6 @@ const Menu = {
       }
     } else {
       $menu.classList.add("hidden");
-    }
-  },
-  /**
-   * List of menu items.
-   **/
-  list: {
-    FREIGHT_COMPONENTS: {
-      name: "Freighter Components"
-    },
-    BASIC_COMPONENTS: {
-      name: "Basic Components",
-      children: {
-        SMALL: "Small Adornments",
-        TIMBER: "Timber Components",
-        STONE: "Stone Components",
-        ALLOY: "Alloy Components"
-      }
-    },
-    STRUCTURES: {
-      name: "Structures",
-      children: {
-        LARGE: "Large Rooms",
-        SMALL: "Small Rooms",
-        DOORS_N_LADDERS: "Doors & Ladders",
-        FRAMES_N_FOUNDATIONS: "Frames & Foundations",
-        WINDOWS: "Windows"
-      }
-    },
-    EQUIPMENT: {
-      name: "Equipment",
-      children: {
-        TERMINALS: "Specialist Terminals",
-        PERMANENT: "Permanent Technology",
-        PORTABLE: "Portable Technology",
-        EXOCRAFT: "Exocraft Modules",
-        FARMING: "Farming",
-        STORAGE: "Storage",
-        FIREWORKS: "Firework Launcher"
-      }
-    },
-    DECORATIVE: {
-      name: "Decorations",
-      children: {
-        DECORATIONS: "Decorative Modules",
-        ADORNMENTS: "Adornments",
-        LIGHT: "Lights",
-        DECAILS: "Decails",
-        POSTERS: "Wall Posters",
-        FILAGE: "Foliage"
-      }
-    },
-    AQUATIC: {
-      name: "Aquatic Construction"
     }
   }
 }

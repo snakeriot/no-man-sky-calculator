@@ -1,14 +1,14 @@
-const Building = {
+const BuildingsPanel = {
   /**
    * Render list of the buildings based on the search criteria.
    */
   renderList: (criteria) => {
-    const buildings = Building.find(criteria);
+    const buildings = BuildingsPanel.find(criteria);
     const $buildings = document.getElementById("building-list");
     $buildings.innerHTML = "";
 
     for (let buildingInex in buildings) {
-      Building.render($buildings, buildings[buildingInex]);
+      BuildingsPanel.render($buildings, buildings[buildingInex]);
     }
   },
   /**
@@ -21,7 +21,7 @@ const Building = {
       const $building = document.createElement("div");
       $building.classList.add("building");
       const $icon = document.createElement("img");
-      $icon.src = Building.getIconUrl(building);
+      $icon.src = BuildingsPanel.getIconUrl(building);
       $building.append($icon);
       const $title = document.createElement("h3");
       $title.innerHTML = building.name;
@@ -42,7 +42,7 @@ const Building = {
     const value = criteria.value;
 
     if (property === "cathegory") {
-      return Building.findByMenuItem(value);
+      return BuildingsPanel.findByMenuItem(value);
     }
     return [];
   },
@@ -64,8 +64,8 @@ const Building = {
     }
     const buildings = [];
 
-    for (let buildingInex in Building.list) {
-      const building = Building.list[buildingInex];
+    for (let buildingInex in Buildings) {
+      const building = Buildings[buildingInex];
 
       if (cathegories.indexOf(building.cathegory) > -1) {
         buildings.push(building);
@@ -88,43 +88,5 @@ const Building = {
    */
   getIconUrl: (building) => {
     return "./images/buildings/" + building.icon;;
-  },
-  /**
-   * List of buildings available for the crafting.
-   */
-  list: {
-    TIMBER_WALL: {
-      name: "Timber Wall",
-      icon: "tibmer_basic_wall.webp",
-      cathegory: Menu.list.BASIC_COMPONENTS.children.TIMBER,
-      recipe: [{
-        ingridient: Ingridient.list.CARBON,
-        count: 25
-      }]
-    },
-    TIMBER_WALL_LARGE_WINDLOW: {
-      name: "Extruded Timber Large Window",
-      icon: "timber_extruded_window_wall.webp",
-      cathegory: Menu.list.BASIC_COMPONENTS.children.TIMBER,
-      recipe: [{
-        ingridient: Ingridient.list.CARBON,
-        count: 25
-      }, {
-        ingridient: Ingridient.list.GLASS,
-        count: 1
-      }]
-    },
-    TRADE_TERMINAL: {
-      name: "Galactic Trade Terminal",
-      icon: "trade_terminal.webp",
-      cathegory: Menu.list.EQUIPMENT.children.PERMANENT,
-      recipe: [{
-        ingridient: Ingridient.list.FERRIT_M,
-        count: 25
-      }, {
-        ingridient: Ingridient.list.MICROCHIP,
-        count: 3
-      }]
-    }
   }
 }
