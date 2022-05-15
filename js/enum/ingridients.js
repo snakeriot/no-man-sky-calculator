@@ -24,6 +24,14 @@ const Ingridients = {
    * @param ingridient - javascript object of the ingridient.
    */
   getIconUrl: (ingridient) => {
-    return "./images/ingridients/" + ingridient.icon;
+    return "./images/ingridients/" + ingridient.icon;s
+  },
+  /**
+   * Get uid of the building.
+   *
+   * @param ingridient - javascript object of the ingridients.
+   */
+  getUid: (ingridient) => {
+    return ingridient.name.replaceAll(" ", "_");
   }
 }

@@ -14,6 +14,7 @@ const BuildQueuePanel = {
         number: 1
       });
       BuildQueuePanel.render(building);
+      IngridientsPanel.addBuilding(building);
     }
   },
   /**
@@ -22,7 +23,7 @@ const BuildQueuePanel = {
    * @param building - javascript object of the building.
    */
   isPresent: (building) => {
-    return BuildQueuePanel.getBuilding(building) !== undefined;
+    return BuildQueuePanel.get(building) !== undefined;
   },
   /**
    * Render building on the UI panel.
@@ -71,14 +72,16 @@ const BuildQueuePanel = {
    * @param operation one of the BuildQueue.operation
    */
   changeNumber: (building, operation) => {
-    const buildingInQ = BuildQueuePanel.getBuilding(building);
+    const buildingInQ = BuildQueuePanel.get(building);
     const $queue = document.getElementById("queue");
     const $building = $queue.querySelector("." + Buildings.getUid(building));
 
     if (operation === Operations.SUBSTRACT) {
       buildingInQ.number -= 1;
+      IngridientsPanel.removeBuilding(building);
     } else {
       buildingInQ.number += 1;
+      IngridientsPanel.addBuilding(building);
     }
     if (buildingInQ.number < 1) {
       $building.remove();
@@ -96,7 +99,7 @@ const BuildQueuePanel = {
    * @param building - javascript object of the building.
    * @return object with two fields - building and number.
    */
-  getBuilding: (building) => {
+  get: (building) => {
     const queue = BuildQueuePanel.queue;
 
     for (let buildingInex in queue) {
