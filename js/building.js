@@ -27,6 +27,9 @@ const Building = {
       const $title = document.createElement("h3");
       $title.innerHTML = building.name;
       $building.append($title);
+      $building.onclick = () => {
+        BuildQueue.add(building);
+      }
       $buildings.append($building);
   },
   /**
@@ -70,6 +73,14 @@ const Building = {
       }
     }
     return buildings;
+  },
+  /**
+   * Get uid of the building.
+   *
+   * @param building - javascript object of the building.
+   */
+  getUid: (building) => {
+    return building.name.replaceAll(" ", "_");
   },
   /**
    * List of buildings available for the crafting.

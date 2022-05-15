@@ -31,7 +31,7 @@ body {
   border-bottom: 1px solid black;
 }
 
-#ingridients, #selected {
+#ingridients, #queue {
   background-color: #282c34;
 }
 

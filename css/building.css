@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+.building:hover {
+  background: #1a2026;
+}
+
 .building img {
   width: 200px;
 }
