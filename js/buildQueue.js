@@ -36,10 +36,26 @@ const BuildQueue = {
     const $buildName = document.createElement("span");
     $buildName.innerHTML = building.name;
     $building.append($buildName);
+
+    const $buildNumControl = document.createElement("div")
+    $buildNumControl.classList.add("build-bum-control");
+    const $buildNumSubstract = document.createElement("a");
+    $buildNumSubstract.innerHTML = "-";
+    $buildNumSubstract.onclick = () => {
+      BuildQueue.changeNumber(building, BuildQueue.operation.SUBSTRACT);
+    };
+    $buildNumControl.append($buildNumSubstract);
     const $buildNum = document.createElement("div");
     $buildNum.innerHTML = 1;
     $buildNum.classList.add("build-number");
-    $building.append($buildNum);
+    $buildNumControl.append($buildNum);
+    const $buildNumAdd = document.createElement("a");
+    $buildNumAdd.innerHTML = "+";
+    $buildNumAdd.onclick = () => {
+      BuildQueue.changeNumber(building, BuildQueue.operation.ADD);
+    };
+    $buildNumControl.append($buildNumAdd);
+    $building.append($buildNumControl);
 
     const $queue = document.getElementById("queue");
     $queue.append($building);
@@ -55,13 +71,16 @@ const BuildQueue = {
     const $queue = document.getElementById("queue");
     const $building = $queue.querySelector("." + Building.getUid(building));
 
-    if (operation === BuildQueue.SUBSTRACT) {
+    if (operation === BuildQueue.operation.SUBSTRACT) {
       buildingInQ.number -= 1;
     } else {
       buildingInQ.number += 1;
     }
     if (buildingInQ.number < 1) {
       $building.remove();
+      BuildQueue.queue = BuildQueue.queue.filter((b) => {
+        return b.building.name !== building.name;
+      });
       return;
     }
     $building.querySelector(".build-number").innerHTML = buildingInQ.number;
