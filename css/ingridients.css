@@ -1,0 +1,30 @@
+#ingridients .ingridient {
+  width: calc(100% - 30px);
+  position: relative;
+  text-align: left;
+  padding: 5px;
+  background: #191d22;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+#ingridients .ingridient .name {
+  max-width: calc(100% - 40px);
+}
+
+#ingridients .ingridient-number {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#ingridients .ingridient img {
+  width: 21px;
+  margin-top: -2px;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
