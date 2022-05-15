@@ -35,17 +35,18 @@ const BuildQueue = {
     $building.classList.add(Building.getUid(building));
     const $buildName = document.createElement("span");
     $buildName.innerHTML = building.name;
+    $buildName.classList.add("name");
     $building.append($buildName);
 
     const $buildNumControl = document.createElement("div")
-    $buildNumControl.classList.add("build-bum-control");
+    $buildNumControl.classList.add("build-num-control");
     const $buildNumSubstract = document.createElement("a");
     $buildNumSubstract.innerHTML = "-";
     $buildNumSubstract.onclick = () => {
       BuildQueue.changeNumber(building, BuildQueue.operation.SUBSTRACT);
     };
     $buildNumControl.append($buildNumSubstract);
-    const $buildNum = document.createElement("div");
+    const $buildNum = document.createElement("span");
     $buildNum.innerHTML = 1;
     $buildNum.classList.add("build-number");
     $buildNumControl.append($buildNum);

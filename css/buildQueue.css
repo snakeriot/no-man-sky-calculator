@@ -1,0 +1,37 @@
+#queue .building {
+  width: calc(100% - 30px);
+  position: relative;
+  text-align: left;
+  padding: 5px;
+}
+
+#queue .building .name {
+  max-width: calc(100% - 100px);
+}
+
+#queue .build-num-control {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+#queue .build-num-control a {
+  background: #282c34;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#queue .build-number {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
