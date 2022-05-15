@@ -8,7 +8,6 @@ const Building = {
     $buildings.innerHTML = "";
 
     for (let buildingInex in buildings) {
-
       Building.render($buildings, buildings[buildingInex]);
     }
   },
@@ -22,7 +21,7 @@ const Building = {
       const $building = document.createElement("div");
       $building.classList.add("building");
       const $icon = document.createElement("img");
-      $icon.src = "./images/buildings/" + building.icon;
+      $icon.src = Building.getIconUrl(building);
       $building.append($icon);
       const $title = document.createElement("h3");
       $title.innerHTML = building.name;
@@ -81,6 +80,14 @@ const Building = {
    */
   getUid: (building) => {
     return building.name.replaceAll(" ", "_");
+  },
+  /**
+   * Get url of the icon for the building.
+   *
+   * @param building - javascript object of the building.
+   */
+  getIconUrl: (building) => {
+    return "./images/buildings/" + building.icon;;
   },
   /**
    * List of buildings available for the crafting.

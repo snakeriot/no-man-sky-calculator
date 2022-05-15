@@ -1,4 +1,4 @@
-.building {
+#buildings .building {
   display: inline-block;
   text-align: center;
   margin: 10px;
@@ -8,15 +8,15 @@
   cursor: pointer;
 }
 
-.building:hover {
+#buildings .building:hover {
   background: #1a2026;
 }
 
-.building img {
+#buildings .building img {
   width: 200px;
 }
 
-.building h3 {
+#buildings .building h3 {
   margin: 0;
   padding: 5px;
   border-top: 1px solid black;

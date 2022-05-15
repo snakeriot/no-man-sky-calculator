@@ -33,6 +33,9 @@ const BuildQueue = {
     const $building = document.createElement("div");
     $building.classList.add("building");
     $building.classList.add(Building.getUid(building));
+    const $buildIcon = document.createElement("img");
+    $buildIcon.src = Building.getIconUrl(building);
+    $building.append($buildIcon);
     const $buildName = document.createElement("span");
     $buildName.innerHTML = building.name;
     $buildName.classList.add("name");

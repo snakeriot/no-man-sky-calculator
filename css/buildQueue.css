@@ -3,6 +3,9 @@
   position: relative;
   text-align: left;
   padding: 5px;
+  background: #191d22;
+  border: 1px solid black;
+  margin-bottom: 5px;
 }
 
 #queue .building .name {
@@ -27,6 +30,7 @@
   vertical-align: middle;
   font-weight: bold;
   font-size: 24px;
+  cursor: pointer;
 }
 
 #queue .build-number {
@@ -34,4 +38,11 @@
   width: 30px;
   text-align: center;
   vertical-align: middle;
+}
+
+#queue .building img {
+  width: 21px;
+  margin-top: -2px;
+  margin-bottom: -5px;
+  margin-right: 5px;
 }
