@@ -1,4 +1,5 @@
 const Menu = {
+  active: undefined,
   /**
    * Render menu when page is opened.
    */
@@ -29,6 +30,7 @@ const Menu = {
    * @param item - Menu item that was clicked.
    */
   pickItem: ($node, item) => {
+    Menu.active = item;
     const $parent = $node.parentElement;
     const $active = $parent.querySelectorAll(".active");
 
