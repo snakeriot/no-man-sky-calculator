@@ -47,6 +47,7 @@ const IngridientsPanel = {
     $name.innerHTML = ingridient.name;
     $name.classList.add("name");
     $ingridient.append($name);
+    $ingridient.setAttribute("ordinal", ingridient.ordinal);
 
     const $num = document.createElement("span");
     $num.innerHTML = recipeNode.number;
@@ -55,6 +56,19 @@ const IngridientsPanel = {
 
     const $list = document.getElementById("ingridients");
     $list.append($ingridient);
+    IngridientsPanel.sort();
+  },
+  sort: () => {
+    const $ingridients = document.querySelectorAll('.ingridient');
+    const $array = [].slice.call($ingridients).sort(function (a, b) {
+        const ordinalA = parseInt(a.getAttribute("ordinal"));
+        const ordinalB = parseInt(b.getAttribute("ordinal"));
+        return ordinalA > ordinalB ? 1 : -1;
+    });
+    const $panel = document.getElementById("ingridients");
+    $array.forEach(function ($ingridient) {
+        $panel.appendChild($ingridient);
+    });
   },
   /**
    * Change number of selected buildings.

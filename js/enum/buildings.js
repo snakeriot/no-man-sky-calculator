@@ -118,6 +118,120 @@ const Buildings = {
       number: 40
     }]
   },
+  LANDING_PAD: {
+    name: "Landing Pad",
+    icon: "landing_pad.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.METAL_PLATING,
+      number: 10
+    }, {
+      ingridient: Ingridients.ION_BATTERY,
+      number: 2
+    }, {
+      ingridient: Ingridients.MICROCHIP,
+      number: 2
+    }]
+  },
+  STORAGE_CONTAINER: {
+    name: "Storage Container",
+    icon: "storage_container.webp",
+    cathegory: MenuItems.EQUIPMENT.children.STORAGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_M,
+      number: 35
+    }, {
+      ingridient: Ingridients.SODIUM,
+      number: 20
+    }]
+  },
+  SOLAR_PANEL: {
+    name: "Solar Panel",
+    icon: "solar_panel.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.GOLD,
+      number: 30
+    }, {
+      ingridient: Ingridients.METAL_PLATING,
+      number: 1
+    }, {
+      ingridient: Ingridients.CHROMATIC_METAL,
+      number: 50
+    }]
+  },
+  BATTERY: {
+    name: "Battery",
+    icon: "battery.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_M,
+      number: 60
+    }, {
+      ingridient: Ingridients.CARBON_C,
+      number: 100
+    }]
+  },
+  GAS_EXTRACTOR: {
+    name: "Gas Extractor",
+    icon: "gas_extractor.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.METAL_PLATING,
+      number: 5
+    }, {
+      ingridient: Ingridients.CHROMATIC_METAL,
+      number: 100
+    }]
+  },
+  MINERAL_EXTRACTOR: {
+    name: "Mineral Extractor",
+    icon: "mineral_extractor.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.METAL_PLATING,
+      number: 5
+    }, {
+      ingridient: Ingridients.CHROMATIC_METAL,
+      number: 100
+    }]
+  },
+  SUPPLY_PIPE: {
+    name: "Sypply Pipe",
+    icon: "supply_pipe.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.FERRIT,
+      number: 25
+    }, {
+      ingridient: Ingridients.CARBON,
+      number: 10
+    }]
+  },
+  SUPPLY_DEPOT: {
+    name: "Supply Depot",
+    icon: "supply_depot.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.METAL_PLATING,
+      number: 10
+    }]
+  },
+  ELECTROMAGNETIC_GENERATOR: {
+    name: "Electromagnetic Generator",
+    icon: "electromagnetic_generator.webp",
+    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    recipe: [{
+      ingridient: Ingridients.METAL_PLATING,
+      number: 2
+    }, {
+      ingridient: Ingridients.FERRIT_M,
+      number: 60
+    }, {
+      ingridient: Ingridients.CHROMATIC_METAL,
+      number: 75
+    }]
+  },
   /**
    * Get list of buildings by search criteria.
    *

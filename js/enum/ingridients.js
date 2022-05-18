@@ -4,43 +4,68 @@
 const Ingridients = {
   CARBON: {
     name: "Carbon",
-    icon: "carbon.webp"
+    icon: "carbon.webp",
+    ordinal: 1
   },
-  MICROCHIP: {
-    name: "Microprocessor",
-    icon: "microprocessor.webp"
-  },
-  GLASS: {
-    name: "Glass",
-    icon: "glass.webp"
-  },
-  FERRIT: {
-    name: "Ferrite Dust",
-    icon: "ferrite.webp"
-  },
-  FERRIT_M: {
-    name: "Magnetised Ferrite",
-    icon: "magnetised_ferrite.webp"
-  },
-  FERRIT_P: {
-    name: "Pure Ferrite",
-    icon: "pure_ferrite.webp"
-  },
-  CHROMATIC_METAL: {
-    name: "Chromatic Metal",
-    icon: "chromatic_metal.webp"
-  },
-  SODIUM: {
-    name: "Sodium",
-    icon: "sodium.webp"
+  CARBON_C: {
+    name: "Condensed Carbon",
+    icon: "condensed_carbon.webp",
+    ordinal: 2
   },
   CARBON_NANOTUBES: {
     name: "Carbon Nanotubes",
-    icon: "carbon_nanotubes.webp"
+    icon: "carbon_nanotubes.webp",
+    ordinal: 4
+  },
+  FERRIT: {
+    name: "Ferrite Dust",
+    icon: "ferrite.webp",
+    ordinal: 10
+  },
+  FERRIT_P: {
+    name: "Pure Ferrite",
+    icon: "pure_ferrite.webp",
+    ordinal: 11
+  },
+  FERRIT_M: {
+    name: "Magnetised Ferrite",
+    icon: "magnetised_ferrite.webp",
+    ordinal: 12
   },
   METAL_PLATING: {
     name: "Metal Plating",
-    icon: "metail_plating.webp"
+    icon: "metail_plating.webp",
+    ordinal: 13
+  },
+  MICROCHIP: {
+    name: "Microprocessor",
+    icon: "microprocessor.webp",
+    ordinal: 999
+  },
+  GLASS: {
+    name: "Glass",
+    icon: "glass.webp",
+    ordinal: 999
+  },
+  CHROMATIC_METAL: {
+    name: "Chromatic Metal",
+    icon: "chromatic_metal.webp",
+    ordinal: 999
+  },
+  SODIUM: {
+    name: "Sodium",
+    icon: "sodium.webp",
+    ordinal: 999
+  },
+  ION_BATTERY: {
+    name: "Ion Battery",
+    icon: "ion_battery.webp",
+    ordinal: 999
+  },
+  GOLD: {
+    name: "Gold",
+    icon: "gold.webp",
+    ordinal: 999
   },
   /**
    * Get url of the icon for the ingridient.
