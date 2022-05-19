@@ -2,6 +2,114 @@
  * List of buildings.
  */
 const Buildings = {
+  LARGE_FREIGHTER_ROOM_1: {
+    name: "Large Freighter Room (Variant 1)",
+    icon: "large_freighter_room_1.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 120
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 20
+    }]
+  },
+  LARGE_FREIGHTER_ROOM_2: {
+    name: "Large Freighter Room (Variant 2)",
+    icon: "large_freighter_room_2.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 120
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 20
+    }]
+  },
+  LARGE_FREIGHTER_ROOM_3: {
+    name: "Large Freighter Room (Variant 3)",
+    icon: "large_freighter_room_3.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 120
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 20
+    }]
+  },
+  FREIGHTER_CORRIDOR: {
+    name: "Freighter Corridor",
+    icon: "freighter_corridor.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 80
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 10
+    }]
+  },
+  CURVED_FREIGHTER_CORRIDOR: {
+    name: "Curved Freighter Corridor",
+    icon: "curved_freighter_corridor.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 80
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 10
+    }]
+  },
+  FREIGHTER_JUNCTION: {
+    name: "Freighter Junction",
+    icon: "freighter_junction.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 80
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 10
+    }]
+  },
+  FREIGHTER_STAIRS: {
+    name: "Freighter Stairs",
+    icon: "freighter_stairs.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 50
+    }]
+  },
+  FREIGHTER_CROSS_JUNCTION: {
+    name: "Freighter Cross Junction",
+    icon: "freighter_cross_junction.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 80
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 10
+    }]
+  },
+  FLEET_COMMAND_ROOM: {
+    name: "Fleet Command Room",
+    icon: "fleet_command_room.webp",
+    cathegory: MenuItems.FREIGHT_COMPONENTS,
+    recipe: [{
+      ingridient: Ingridients.SILVER,
+      number: 120
+    }, {
+      ingridient: Ingridients.GOLD,
+      number: 40
+    }, {
+      ingridient: Ingridients.TRITIUM,
+      number: 10
+    }]
+  },
   CYLINDRICAL_ROOM: {
     name: "Cylindrical Room",
     icon: "cylindrical_room.webp",
@@ -391,8 +499,9 @@ const Buildings = {
 
     for (let inex in array) {
       const building = array[inex];
+      const cathegory = building.cathegory["name"]  || building.cathegory;
 
-      if (cathegories.indexOf(building.cathegory) > -1) {
+      if (cathegories.indexOf(cathegory) > -1) {
         buildings.push(building);
       }
     }
@@ -404,7 +513,7 @@ const Buildings = {
    * @param building - javascript object of the building.
    */
   getUid: (building) => {
-    return building.name.replaceAll(" ", "_");
+    return building.name.replaceAll(/ |\(|\)/g, "_");
   },
   /**
    * Get url of the icon for the building.

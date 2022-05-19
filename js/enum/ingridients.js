@@ -47,6 +47,16 @@ const Ingridients = {
     icon: "gold.webp",
     ordinal: 40
   },
+  SILVER: {
+    name: "Silver",
+    icon: "silver.webp",
+    ordinal: 41
+  },
+  TRITIUM: {
+    name: "Tritium",
+    icon: "tritium.webp",
+    ordinal: 42
+  },
   CHROMATIC_METAL: {
     name: "Chromatic Metal",
     icon: "chromatic_metal.webp",
