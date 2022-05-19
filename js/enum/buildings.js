@@ -2,6 +2,105 @@
  * List of buildings.
  */
 const Buildings = {
+  CYLINDRICAL_ROOM: {
+    name: "Cylindrical Room",
+    icon: "cylindrical_room.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 250
+    }]
+  },
+  SQUARE_ROOM: {
+    name: "Square Room",
+    icon: "square_room.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 250
+    }]
+  },
+  STRAIGHT_CORRIDOR: {
+    name: "Straight Corridor",
+    icon: "straight_corridor.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 100
+    }]
+  },
+  L_SHAPED_CORRIDOR: {
+    name: "L-Shaped Corridor",
+    icon: "l_shaped_corridor.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 100
+    }]
+  },
+  T_SHAPED_CORRIDOR: {
+    name: "T-Shaped Corridor",
+    icon: "t_shaped_corridor.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 100
+    }]
+  },
+  X_SHAPED_CORRIDOR: {
+    name: "X-Shaped Corridor",
+    icon: "x_shaped_corridor.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 100
+    }]
+  },
+  CURVED_CORRIDOR: {
+    name: "Curved Corridor",
+    icon: "curved_corridor.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 100
+    }]
+  },
+  GLASS_ROOFED_CORRIDOR: {
+    name: "Glass Roofed Corridor",
+    icon: "glass_roofed_corridor.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 30
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 1
+    }]
+  },
+  VIEWING_SPHERE: {
+    name: "Viewing Sphere",
+    icon: "viewing_sphere.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_M,
+      number: 10
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 3
+    }]
+  },
+  BIO_DOME: {
+    name: "Bio-Dome",
+    icon: "bio_dome.webp",
+    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_M,
+      number: 25
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 5
+    }]
+  },
   TIMBER_WALL: {
     name: "Timber Wall",
     icon: "tibmer_basic_wall.webp",
