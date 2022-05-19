@@ -38,6 +38,7 @@ const IngridientsPanel = {
     const $ingridient = document.createElement("div");
     $ingridient.classList.add("ingridient");
     $ingridient.classList.add(Ingridients.getUid(ingridient));
+    $ingridient.append(DomBuilder.checkBox());
 
     const $icon = document.createElement("img");
     $icon.src = Ingridients.getIconUrl(ingridient);
@@ -58,6 +59,9 @@ const IngridientsPanel = {
     $list.append($ingridient);
     IngridientsPanel.sort();
   },
+  /**
+   * Change order of ingridients, sort them by ordinal.
+   */
   sort: () => {
     const $ingridients = document.querySelectorAll('.ingridient');
     const $array = [].slice.call($ingridients).sort(function (a, b) {

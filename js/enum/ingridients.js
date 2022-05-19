@@ -37,6 +37,21 @@ const Ingridients = {
     icon: "metail_plating.webp",
     ordinal: 13
   },
+  SODIUM: {
+    name: "Sodium",
+    icon: "sodium.webp",
+    ordinal: 20
+  },
+  GOLD: {
+    name: "Gold",
+    icon: "gold.webp",
+    ordinal: 40
+  },
+  CHROMATIC_METAL: {
+    name: "Chromatic Metal",
+    icon: "chromatic_metal.webp",
+    ordinal: 49
+  },
   MICROCHIP: {
     name: "Microprocessor",
     icon: "microprocessor.webp",
@@ -47,24 +62,9 @@ const Ingridients = {
     icon: "glass.webp",
     ordinal: 999
   },
-  CHROMATIC_METAL: {
-    name: "Chromatic Metal",
-    icon: "chromatic_metal.webp",
-    ordinal: 999
-  },
-  SODIUM: {
-    name: "Sodium",
-    icon: "sodium.webp",
-    ordinal: 999
-  },
   ION_BATTERY: {
     name: "Ion Battery",
     icon: "ion_battery.webp",
-    ordinal: 999
-  },
-  GOLD: {
-    name: "Gold",
-    icon: "gold.webp",
     ordinal: 999
   },
   /**
