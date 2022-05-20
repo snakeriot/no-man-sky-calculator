@@ -439,6 +439,90 @@ const Buildings = {
       number: 75
     }]
   },
+  COLOURED_LIGHT: {
+    name: "Coloured Light",
+    icon: "coloured_light.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.SODIUM,
+      number: 5
+    }]
+  },
+  CEILING_LIGHT: {
+    name: "Ceiling Light",
+    icon: "ceiling_light.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.SODIUM,
+      number: 15
+    }, {
+      ingridient: Ingridients.FERRIT_P,
+      number: 5
+    }]
+  },
+  LIGHT: {
+    name: "Light",
+    icon: "light.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.SODIUM,
+      number: 5
+    }]
+  },
+  LAB_LAMP: {
+    name: "Lab Lamp",
+    icon: "lab_lamp.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.SODIUM,
+      number: 10
+    }]
+  },
+  SPLAYED_HANGING_LAMP: {
+    name: "Splayed hanging Lamp",
+    icon: "splayed_hanging_lamp.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.CARBON,
+      number: 25
+    }]
+  },
+  CIRCLES_HANGING_LAMP: {
+    name: "Circles Hanging Lamp",
+    icon: "circles_hanging_lamp.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.CARBON,
+      number: 25
+    }]
+  },
+  TRIPLE_HANGING_LAMP: {
+    name: "Triple Hanging Lamp",
+    icon: "triple_hanging_lamp.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.CARBON,
+      number: 25
+    }]
+  },
+  TUBE_LAMP: {
+    name: "Tube Lamp",
+    icon: "tube_lamp.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.CARBON,
+      number: 25
+    }]
+  },
+  HANGING_LAMP: {
+    name: "Hanging Lamp",
+    icon: "hanging_lamp.webp",
+    cathegory: MenuItems.DECORATIVE.children.LIGHT,
+    recipe: [{
+      ingridient: Ingridients.CARBON,
+      number: 25
+    }]
+  },
   /**
    * Get list of buildings by search criteria.
    *
