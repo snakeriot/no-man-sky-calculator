@@ -523,6 +523,126 @@ const Buildings = {
       number: 25
     }]
   },
+  DEEPWATER_CHAMBER: {
+    name: "Deepwater Chamber",
+    icon: "deepwater_chamber.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 180
+    }]
+  },
+  SQUARE_DEEPWATER_CHAMBER: {
+    name: "Square Deepwater Chamber",
+    icon: "square_deepwater_chamber.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 350
+    }]
+  },
+  MOON_POOL_FLOOR: {
+    name: "Moon Pool Floor",
+    icon: "moon_pool_floor.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.CRYSTAL_SULPHIDE,
+      number: 3
+    }, {
+      ingridient: Ingridients.LIVING_PEARL,
+      number: 2
+    }, {
+      ingridient: Ingridients.FERRIT_P,
+      number: 80
+    }]
+  },
+  WATERTIGHT_DOOR: {
+    name: "Watertight Door",
+    icon: "watertight_door.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.CRYSTAL_SULPHIDE,
+      number: 1
+    }, {
+      ingridient: Ingridients.FERRIT_P,
+      number: 25
+    }]
+  },
+  GLASS_TUNNEL: {
+    name: "Glass Tunnel",
+    icon: "glass_tunnel.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 25
+    }, {
+      ingridient: Ingridients.CRYSTAL_SULPHIDE,
+      number: 2
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 1
+    }]
+  },
+  L_SHAPED_GLASS_TUNNEL: {
+    name: "L-Shaped Glass Tunnel",
+    icon: "l_shaped_glass_tunnel.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 25
+    }, {
+      ingridient: Ingridients.CRYSTAL_SULPHIDE,
+      number: 2
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 1
+    }]
+  },
+  T_SHAPED_GLASS_TUNNEL: {
+    name: "T-Shaped Glass Tunnel",
+    icon: "t_shaped_glass_tunnel.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 25
+    }, {
+      ingridient: Ingridients.CRYSTAL_SULPHIDE,
+      number: 2
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 1
+    }]
+  },
+  X_SHAPED_GLASS_TUNNEL: {
+    name: "X-Shaped Glass Tunnel",
+    icon: "x_shaped_glass_tunnel.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 25
+    }, {
+      ingridient: Ingridients.CRYSTAL_SULPHIDE,
+      number: 2
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 1
+    }]
+  },
+  VERTICAL_GLASS_TUNNEL: {
+    name: "Vertical Glass Tunnel",
+    icon: "vertical_glass_tunnel.webp",
+    cathegory: MenuItems.AQUATIC,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_P,
+      number: 25
+    }, {
+      ingridient: Ingridients.CRYSTAL_SULPHIDE,
+      number: 2
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 1
+    }]
+  },
   /**
    * Get list of buildings by search criteria.
    *

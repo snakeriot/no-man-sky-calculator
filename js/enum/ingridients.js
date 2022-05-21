@@ -62,6 +62,16 @@ const Ingridients = {
     icon: "chromatic_metal.webp",
     ordinal: 49
   },
+  LIVING_PEARL: {
+    name: "Living Pearl",
+    icon: "living_peral.webp",
+    ordinal: 50
+  },
+  CRYSTAL_SULPHIDE: {
+    name: "Crystal Sulphide",
+    icon: "crystal_sulphide.webp",
+    ordinal: 51
+  },
   MICROCHIP: {
     name: "Microprocessor",
     icon: "microprocessor.webp",
