@@ -11,6 +11,13 @@ const Menu = {
       const item = menuItems[itemString];
       Menu.createMenuNode(item, $menu);
     }
+    setTimeout(Menu.selectFirst, 500);
+  },
+  /**
+   * Select first element from the menu.
+   */
+  selectFirst: () => {
+    document.querySelector("#menu > li:first-child").click();
   },
   /**
    * Create an element in the menu.
