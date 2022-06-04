@@ -33,7 +33,7 @@
   background-color: #42464e;
 }
 
-#menu li:not(:last-child), #sub-menu li:not(:last-child) {
+#sub-menu li:not(:last-child) {
   border-right: 1px solid black;
 }
 
