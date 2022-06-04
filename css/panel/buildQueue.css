@@ -1,5 +1,4 @@
 #queue .building {
-  width: calc(100% - 30px);
   position: relative;
   text-align: left;
   padding: 5px;
@@ -45,4 +44,10 @@
   margin-top: -2px;
   margin-bottom: -5px;
   margin-right: 5px;
+}
+
+#queue .action_icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }

@@ -18,6 +18,18 @@ const BuildQueuePanel = {
     }
   },
   /**
+   * Clear build que.
+   */
+  clear: () => {
+    while (BuildQueuePanel.queue.length > 0) {
+      const buildingInQ = BuildQueuePanel.queue[0];
+
+      for (let i = 1; i <= buildingInQ.number; i++) {
+        BuildQueuePanel.changeNumber(buildingInQ.building, Operations.SUBSTRACT);
+      }
+    }
+  },
+  /**
    * Check if building is present in the queue.
    *
    * @param building - javascript object of the building.

@@ -12,6 +12,7 @@ body {
 }
 
 .panel {
+  position: relative;
   padding: 15px;
 }
 
@@ -41,4 +42,19 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+.action_icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.remove {
+  background-image: url(../images/actions/trash.png);
 }
