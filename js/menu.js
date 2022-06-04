@@ -5,7 +5,7 @@ const Menu = {
    */
   render: () => {
     const $menu = document.getElementById("menu");
-    const menuItems = MenuItems;
+    const menuItems = EnumUtil.toArray(MenuItems);
 
     for (let itemString in menuItems) {
       const item = menuItems[itemString];
@@ -24,9 +24,17 @@ const Menu = {
    **/
   createMenuNode: (item, $parent) => {
     const $item = document.createElement("li");
-    $item.innerHTML = item.name;
+
+    if (item.icon) {
+      const $icon = document.createElement("img");
+      $icon.src = MenuItems.getIconUrl(item);
+      $icon.alt = item.name;
+      $item.append($icon);
+    } else {
+      $item.innerHTML = item.name;
+    }
     $item.onclick = (event) => {
-      Menu.pickItem(event.target, item);
+      Menu.pickItem($item, item);
     };
     $parent.prepend($item);
   },

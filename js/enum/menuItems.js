@@ -2,52 +2,108 @@
  * List of menu items.
  */
 const MenuItems = {
-  FREIGHT_COMPONENTS: {
-    name: "Freighter Components"
-  },
-  BASIC_COMPONENTS: {
-    name: "Basic Components",
+  DEPLOYABLE_TECHNOLOGY: {
+    name: "Deployable Technology",
+    icon: "portable.png",
     children: {
-      SMALL: "Small Adornments",
-      TIMBER: "Timber Components",
-      STONE: "Stone Components",
-      ALLOY: "Alloy Components"
+      PORTABLE: "Portable Units",
+      EXOCRAFT: "Exocraft Geobays"
     }
+  },
+  FREIGHT_COMPONENTS: {
+    name: "Freighter Components",
+    icon: "freighter.png"
   },
   STRUCTURES: {
-    name: "Structures",
+    name: "Large Structures",
+    icon: "large_structures.png",
     children: {
-      LARGE: "Large Rooms",
-      SMALL: "Small Rooms",
-      DOORS_N_LADDERS: "Doors & Ladders",
-      FRAMES_N_FOUNDATIONS: "Frames & Foundations",
-      WINDOWS: "Windows"
+      ROOMS: "Rooms And Foundations",
+      CORRIDORS: "Corridors",
+      DOORS_N_LADDERS: "Doors And Ladders",
+      CUBOID: "Cuboid Rooms"
     }
   },
-  EQUIPMENT: {
-    name: "Equipment",
+  TIMBER: {
+    name: "Timber Structures",
+    icon: "timber_structures.png",
     children: {
-      TERMINALS: "Specialist Terminals",
-      PERMANENT: "Permanent Technology",
-      PORTABLE: "Portable Technology",
-      EXOCRAFT: "Exocraft Modules",
+      FLOORING_N_STAIRS: "Flooring And Stairs",
+      WALLS_DOORS_WINDOWS: "Walls, Doors And Windows",
+      ROOFING: "Roofing"
+    }
+  },
+  STONE: {
+    name: "Stone Structures",
+    icon: "stone_structures.png",
+    children: {
+      FLOORING_N_STAIRS: "Flooring And Stairs",
+      WALLS_DOORS_WINDOWS: "Walls, Doors And Windows",
+      ROOFING: "Roofing"
+    }
+  },
+  ALLOY: {
+    name: "Alloy Structures",
+    icon: "alloy_structures.png",
+    children: {
+      FLOORING_N_STAIRS: "Flooring And Stairs",
+      WALLS_DOORS_WINDOWS: "Walls, Doors And Windows",
+      ROOFING: "Roofing"
+    }
+  },
+  ADVANCED_TECH: {
+    name: "Advanced Technology",
+    icon: "advanced_tech.png",
+    children: {
+      GENERAL: "General Utility",
       FARMING: "Farming",
       STORAGE: "Storage",
-      FIREWORKS: "Firework Launcher"
+      TERMINALS: "Specialist Terminals"
+    }
+  },
+  POWER_N_INDUSTRY: {
+    name: "Power And Industry",
+    icon: "power_industry.png",
+    children: {
+      POWER: "Power Generation",
+      INDUSTRY: "Industrial Components",
+      ELECTRICAL: "Electrical Switches"
+    }
+  },
+  FURNISHING: {
+    name: "Furnishings",
+    icon: "furnishing.png",
+    children: {
+      INTERIOR: "Interior Decoration",
+      DECORATIVE_TECH: "Decorative Technology"
     }
   },
   DECORATIVE: {
-    name: "Decorations",
+    name: "Decoration",
+    icon: "decoration.png",
     children: {
-      DECORATIONS: "Decorative Modules",
-      ADORNMENTS: "Adornments",
       LIGHT: "Lights",
-      DECAILS: "Decails",
-      POSTERS: "Wall Posters",
-      FILAGE: "Foliage"
+      ADORNMENTS: "Structural Adornments",
+      CONSTRUCTION: "Construction Parts"
     }
   },
-  AQUATIC: {
-    name: "Aquatic Construction"
+  WALL_ART: {
+    name: "Wall Art",
+    icon: "wall_art.png",
+    children: {
+      DECAILS: "Decails",
+      POSTERS: "Posters"
+    }
+  },
+  LEGACY: {
+    name: "Legacy Structures",
+    icon: "legacy.png",
+    children: {
+      WOOD: "Wood",
+      METAIL: "Metal"
+    }
+  },
+  getIconUrl: (item) => {
+    return "./images/menu/" + item.icon;;
   }
 }

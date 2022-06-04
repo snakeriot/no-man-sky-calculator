@@ -10,6 +10,10 @@
   font-size: 18px;
 }
 
+#menu li img {
+  width: 50px;
+}
+
 #menu li#search-bar {
   position: absolute;
   right: 0;

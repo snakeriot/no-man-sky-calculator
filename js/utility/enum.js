@@ -9,6 +9,6 @@ const EnumUtil = {
         array.push(field);
       }
     }
-    return array;
+    return array.reverse();
   }
 }

@@ -2,6 +2,15 @@
  * List of buildings.
  */
 const Buildings = {
+  BASE_COMPUTER: {
+    name: "Base Computer",
+    icon: "base_computer.webp",
+    cathegory: MenuItems.DEPLOYABLE_TECHNOLOGY.children.PORTABLE,
+    recipe: [{
+      ingridient: Ingridients.CHROMATIC_METAL,
+      number: 30
+    }]
+  },
   LARGE_FREIGHTER_ROOM_1: {
     name: "Large Freighter Room (Variant 1)",
     icon: "large_freighter_room_1.webp",
@@ -113,7 +122,7 @@ const Buildings = {
   CYLINDRICAL_ROOM: {
     name: "Cylindrical Room",
     icon: "cylindrical_room.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.ROOMS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 250
@@ -122,16 +131,28 @@ const Buildings = {
   SQUARE_ROOM: {
     name: "Square Room",
     icon: "square_room.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.ROOMS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 250
     }]
   },
+  BIO_DOME: {
+    name: "Bio-Dome",
+    icon: "bio_dome.webp",
+    cathegory: MenuItems.STRUCTURES.children.ROOMS,
+    recipe: [{
+      ingridient: Ingridients.FERRIT_M,
+      number: 25
+    }, {
+      ingridient: Ingridients.GLASS,
+      number: 5
+    }]
+  },
   STRAIGHT_CORRIDOR: {
     name: "Straight Corridor",
     icon: "straight_corridor.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 100
@@ -140,7 +161,7 @@ const Buildings = {
   L_SHAPED_CORRIDOR: {
     name: "L-Shaped Corridor",
     icon: "l_shaped_corridor.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 100
@@ -149,7 +170,7 @@ const Buildings = {
   T_SHAPED_CORRIDOR: {
     name: "T-Shaped Corridor",
     icon: "t_shaped_corridor.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 100
@@ -158,7 +179,7 @@ const Buildings = {
   X_SHAPED_CORRIDOR: {
     name: "X-Shaped Corridor",
     icon: "x_shaped_corridor.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 100
@@ -167,7 +188,7 @@ const Buildings = {
   CURVED_CORRIDOR: {
     name: "Curved Corridor",
     icon: "curved_corridor.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 100
@@ -176,7 +197,7 @@ const Buildings = {
   GLASS_ROOFED_CORRIDOR: {
     name: "Glass Roofed Corridor",
     icon: "glass_roofed_corridor.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 30
@@ -188,7 +209,7 @@ const Buildings = {
   VIEWING_SPHERE: {
     name: "Viewing Sphere",
     icon: "viewing_sphere.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_M,
       number: 10
@@ -197,22 +218,10 @@ const Buildings = {
       number: 3
     }]
   },
-  BIO_DOME: {
-    name: "Bio-Dome",
-    icon: "bio_dome.webp",
-    cathegory: MenuItems.STRUCTURES.children.LARGE,
-    recipe: [{
-      ingridient: Ingridients.FERRIT_M,
-      number: 25
-    }, {
-      ingridient: Ingridients.GLASS,
-      number: 5
-    }]
-  },
   TIMBER_WALL: {
     name: "Timber Wall",
     icon: "tibmer_basic_wall.webp",
-    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    cathegory: MenuItems.TIMBER.children.WALLS_DOORS_WINDOWS,
     recipe: [{
       ingridient: Ingridients.CARBON,
       number: 25
@@ -221,7 +230,7 @@ const Buildings = {
   TIMBER_FLOOR: {
     name: "Timber Floor",
     icon: "tibmer_basic_floor.webp",
-    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    cathegory: MenuItems.TIMBER.children.FLOORING_N_STAIRS,
     recipe: [{
       ingridient: Ingridients.CARBON,
       number: 10
@@ -230,7 +239,7 @@ const Buildings = {
   TIMBER_RECTANGULAR_DOOR: {
     name: "Timber Rectangular Door",
     icon: "tibmer_rectangular_door.webp",
-    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    cathegory: MenuItems.TIMBER.children.WALLS_DOORS_WINDOWS,
     recipe: [{
       ingridient: Ingridients.CARBON,
       number: 25
@@ -243,7 +252,7 @@ const Buildings = {
   LARGE_TIMBER_TRIPPLE_WINDOW: {
     name: "Large Timber Triple Window",
     icon: "large_timber_triple_window.webp",
-    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    cathegory: MenuItems.TIMBER.children.WALLS_DOORS_WINDOWS,
     recipe: [{
       ingridient: Ingridients.CARBON,
       number: 25
@@ -256,7 +265,7 @@ const Buildings = {
   TIMBER_WALL_LARGE_WINDLOW: {
     name: "Extruded Timber Large Window",
     icon: "timber_extruded_window_wall.webp",
-    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    cathegory: MenuItems.TIMBER.children.WALLS_DOORS_WINDOWS,
     recipe: [{
       ingridient: Ingridients.CARBON,
       number: 25
@@ -268,7 +277,7 @@ const Buildings = {
   TIMBER_FRAMED_GLASS_PANEL: {
     name: "Timber-Framed Glass Panel",
     icon: "timber_framed_glass_panel.webp",
-    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    cathegory: MenuItems.TIMBER.children.ROOFING,
     recipe: [{
       ingridient: Ingridients.CARBON,
       number: 10
@@ -280,7 +289,7 @@ const Buildings = {
   TIMBER_RAMP: {
     name: "Timber Ramp",
     icon: "timber_ramp.webp",
-    cathegory: MenuItems.BASIC_COMPONENTS.children.TIMBER,
+    cathegory: MenuItems.TIMBER.children.FLOORING_N_STAIRS,
     recipe: [{
       ingridient: Ingridients.CARBON,
       number: 35
@@ -292,7 +301,7 @@ const Buildings = {
   TRADE_TERMINAL: {
     name: "Galactic Trade Terminal",
     icon: "trade_terminal.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.ADVANCED_TECH.children.TERMINALS,
     recipe: [{
       ingridient: Ingridients.FERRIT_M,
       number: 25
@@ -301,19 +310,10 @@ const Buildings = {
       number: 3
     }]
   },
-  BASE_COMPUTER: {
-    name: "Base Computer",
-    icon: "base_computer.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PORTABLE,
-    recipe: [{
-      ingridient: Ingridients.CHROMATIC_METAL,
-      number: 30
-    }]
-  },
   BASE_TELEPORT: {
     name: "Base Teleport Module",
     icon: "base_teleport.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.ADVANCED_TECH.children.GENERAL,
     recipe: [{
       ingridient: Ingridients.METAL_PLATING,
       number: 4
@@ -328,7 +328,7 @@ const Buildings = {
   LANDING_PAD: {
     name: "Landing Pad",
     icon: "landing_pad.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.ADVANCED_TECH.children.GENERAL,
     recipe: [{
       ingridient: Ingridients.METAL_PLATING,
       number: 10
@@ -343,7 +343,7 @@ const Buildings = {
   STORAGE_CONTAINER: {
     name: "Storage Container",
     icon: "storage_container.webp",
-    cathegory: MenuItems.EQUIPMENT.children.STORAGE,
+    cathegory: MenuItems.ADVANCED_TECH.children.STORAGE,
     recipe: [{
       ingridient: Ingridients.FERRIT_M,
       number: 35
@@ -355,7 +355,7 @@ const Buildings = {
   SOLAR_PANEL: {
     name: "Solar Panel",
     icon: "solar_panel.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.POWER_N_INDUSTRY.children.POWER,
     recipe: [{
       ingridient: Ingridients.GOLD,
       number: 30
@@ -370,7 +370,7 @@ const Buildings = {
   BATTERY: {
     name: "Battery",
     icon: "battery.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.POWER_N_INDUSTRY.children.POWER,
     recipe: [{
       ingridient: Ingridients.FERRIT_M,
       number: 60
@@ -382,7 +382,7 @@ const Buildings = {
   GAS_EXTRACTOR: {
     name: "Gas Extractor",
     icon: "gas_extractor.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.POWER_N_INDUSTRY.children.INDUSTRY,
     recipe: [{
       ingridient: Ingridients.METAL_PLATING,
       number: 5
@@ -394,7 +394,7 @@ const Buildings = {
   MINERAL_EXTRACTOR: {
     name: "Mineral Extractor",
     icon: "mineral_extractor.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.POWER_N_INDUSTRY.children.INDUSTRY,
     recipe: [{
       ingridient: Ingridients.METAL_PLATING,
       number: 5
@@ -406,7 +406,7 @@ const Buildings = {
   SUPPLY_PIPE: {
     name: "Sypply Pipe",
     icon: "supply_pipe.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.POWER_N_INDUSTRY.children.INDUSTRY,
     recipe: [{
       ingridient: Ingridients.FERRIT,
       number: 25
@@ -418,7 +418,7 @@ const Buildings = {
   SUPPLY_DEPOT: {
     name: "Supply Depot",
     icon: "supply_depot.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.POWER_N_INDUSTRY.children.INDUSTRY,
     recipe: [{
       ingridient: Ingridients.METAL_PLATING,
       number: 10
@@ -427,7 +427,7 @@ const Buildings = {
   ELECTROMAGNETIC_GENERATOR: {
     name: "Electromagnetic Generator",
     icon: "electromagnetic_generator.webp",
-    cathegory: MenuItems.EQUIPMENT.children.PERMANENT,
+    cathegory: MenuItems.POWER_N_INDUSTRY.children.POWER,
     recipe: [{
       ingridient: Ingridients.METAL_PLATING,
       number: 2
@@ -526,7 +526,7 @@ const Buildings = {
   DEEPWATER_CHAMBER: {
     name: "Deepwater Chamber",
     icon: "deepwater_chamber.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.ROOMS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 180
@@ -535,7 +535,7 @@ const Buildings = {
   SQUARE_DEEPWATER_CHAMBER: {
     name: "Square Deepwater Chamber",
     icon: "square_deepwater_chamber.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.ROOMS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 350
@@ -544,7 +544,7 @@ const Buildings = {
   MOON_POOL_FLOOR: {
     name: "Moon Pool Floor",
     icon: "moon_pool_floor.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.DOORS_N_LADDERS,
     recipe: [{
       ingridient: Ingridients.CRYSTAL_SULPHIDE,
       number: 3
@@ -559,7 +559,7 @@ const Buildings = {
   WATERTIGHT_DOOR: {
     name: "Watertight Door",
     icon: "watertight_door.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.DOORS_N_LADDERS,
     recipe: [{
       ingridient: Ingridients.CRYSTAL_SULPHIDE,
       number: 1
@@ -571,7 +571,7 @@ const Buildings = {
   GLASS_TUNNEL: {
     name: "Glass Tunnel",
     icon: "glass_tunnel.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 25
@@ -586,7 +586,7 @@ const Buildings = {
   L_SHAPED_GLASS_TUNNEL: {
     name: "L-Shaped Glass Tunnel",
     icon: "l_shaped_glass_tunnel.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 25
@@ -601,7 +601,7 @@ const Buildings = {
   T_SHAPED_GLASS_TUNNEL: {
     name: "T-Shaped Glass Tunnel",
     icon: "t_shaped_glass_tunnel.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 25
@@ -616,7 +616,7 @@ const Buildings = {
   X_SHAPED_GLASS_TUNNEL: {
     name: "X-Shaped Glass Tunnel",
     icon: "x_shaped_glass_tunnel.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 25
@@ -631,7 +631,7 @@ const Buildings = {
   VERTICAL_GLASS_TUNNEL: {
     name: "Vertical Glass Tunnel",
     icon: "vertical_glass_tunnel.webp",
-    cathegory: MenuItems.AQUATIC,
+    cathegory: MenuItems.STRUCTURES.children.CORRIDORS,
     recipe: [{
       ingridient: Ingridients.FERRIT_P,
       number: 25
